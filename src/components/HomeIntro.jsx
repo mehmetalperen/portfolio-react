@@ -53,7 +53,7 @@ const HomeIntro = () => {
           </h1>
         </div>
       </div>
-      <img src="cover-pic.jpg" alt="my-profile-pic" />
+      <img id="pp" src="cover-pic.jpg" alt="my-profile-pic" />
       <style jsx>
         {`
           .HomeIntro {
@@ -88,7 +88,7 @@ const HomeIntro = () => {
             cursor: pointer;
             color: #ff7b47;
           }
-          img {
+          #pp {
             position: absolute;
             right: 0;
             top: 0;
