@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Typography from "@material-ui/core/Typography";
 
 const HomeIntro = () => {
   const [hoverName, setHoverName] = useState(false);
@@ -7,44 +6,52 @@ const HomeIntro = () => {
   // align-items: center;
   // display: flex;
   // flex-wrap: wrap;
+
+  // console.log(window.matchMedia("(pointer: coarse)").matches);
+
   return (
     <div className="HomeIntro">
       <div className="content-wrapper">
-        <Typography variant="h1" component="h1" color="textSecondary">
-          HELLO,
-        </Typography>
-        <Typography variant="h1" component="h1" color="textSecondary">
-          I'M
-        </Typography>
-        <Typography
-          variant="h1"
-          component="h1"
-          color="textSecondary"
-          onMouseEnter={() => {
-            setHoverName(!hoverName);
-          }}
-          onMouseLeave={() => {
-            setHoverName(!hoverName);
-          }}
-        >
-          {hoverName ? "NADI" : "MEHMET"}
-        </Typography>
-        <Typography variant="h1" component="h1" color="textDisabled">
-          <h4
-            style={{ color: "#FF4900", fontWeight: "inherit" }}
+        <div className="greeding-container">
+          <h1 className="greeding-message">HELLO,</h1>
+          <h1 className="greeding-message">I'M</h1>
+          {hoverName ? (
+            <h1
+              className="greeding-message"
+              onMouseLeave={() => {
+                setHoverName(!hoverName);
+              }}
+            >
+              NADI
+            </h1>
+          ) : (
+            <h1
+              className="greeding-message"
+              onMouseEnter={() => {
+                setHoverName(!hoverName);
+              }}
+            >
+              MEHMET
+            </h1>
+          )}
+        </div>
+
+        <div className="action-container">
+          <h1
+            id="action-message"
             onMouseEnter={() => {
-              setHoverAction(!hoverAction);
+              setHoverAction(true);
             }}
             onMouseLeave={() => {
-              setHoverAction(!hoverAction);
+              setHoverAction(false);
             }}
             onClick={() => {
-              alert("will scroll");
+              alert("Will be scrooling down");
             }}
           >
-            {hoverAction ? "=> CLICK <=" : "LEARN MORE?"}
-          </h4>
-        </Typography>
+            {hoverAction ? "CLICK!" : "LEARN MORE?"}
+          </h1>
+        </div>
       </div>
       <img src="cover-pic.jpg" alt="my-profile-pic" />
       <style jsx>
@@ -62,8 +69,24 @@ const HomeIntro = () => {
           }
           .content-wrapper {
             margin: 0 auto 0 10%;
-            width: fit-content;
+            min-width: 50%;
             z-index: 10;
+          }
+          h1 {
+            font-family: Arial;
+            font-size: 60px;
+            font-weight: 500;
+          }
+          .greeding-message {
+            color: #1882d4;
+          }
+
+          #action-message {
+            color: #ff4900;
+          }
+          #action-message:hover {
+            cursor: pointer;
+            color: #ff7b47;
           }
           img {
             position: absolute;
@@ -79,6 +102,7 @@ const HomeIntro = () => {
           @media only screen and (max-width: 900px) {
             .content-wrapper {
               margin: 0 auto;
+              width: 100%;
             }
           }
         `}
