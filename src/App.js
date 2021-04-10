@@ -22,6 +22,10 @@ const theme = createMuiTheme({
       default: "#000000",
       paper: "#fafafa",
     },
+    text: {
+      primary: "#fafafa",
+      secondary: "#0664AD",
+    },
   },
   typography: {
     fontFamily: "Arial",
