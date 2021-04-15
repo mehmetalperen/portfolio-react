@@ -95,6 +95,16 @@ const HomeIntro = () => {
             max-height: 100vh;
             margin: 0 0 0 auto;
             border-radius: 100% 100% 0 50%;
+            opacity: 0;
+            animation: picLoad 2s ease-in-out 0.5s forwards;
+          }
+          @keyframes picLoad {
+            0 {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
           }
           h4:hover {
             cursor: pointer;
