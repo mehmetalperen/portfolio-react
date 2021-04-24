@@ -79,9 +79,6 @@ const Bio = () => {
           margin: 0 auto;
           align-items: center;
           text-align: center;
-          border-style: solid;
-          border-width: 3px;
-          border-color: red;
         }
         #section-img {
           width: 100%;
@@ -90,9 +87,6 @@ const Bio = () => {
         .bio-content-wrapper {
           width: 50%;
           margin: 0 auto;
-          border-style: solid;
-          border-width: 3px;
-          border-color: blue;
         }
         .small-btn-container {
           display: flex;

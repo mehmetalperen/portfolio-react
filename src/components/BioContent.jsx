@@ -23,9 +23,6 @@ const BioContent = () => {
       <style jsx>{`
         .BioContent {
           margin: 0 auto 5% auto;
-          border-style: solid;
-          border-width: 3px;
-          border-color: orange;
         }
       `}</style>
     </div>
