@@ -113,14 +113,14 @@ const MobileNavbar = () => {
           }
 
           .dropdown-nav {
-            position: absolute;
+            position: fixed;
             top: 0;
             right: 0;
             left: 0;
             bottom: 0;
             align-items: center;
             text-align: center;
-            z-index: 1000;
+            z-index: 10000;
             width: 100%;
             height: 100vh;
             background-color: #000000;

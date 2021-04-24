@@ -12,18 +12,26 @@ const DesktopNavbar = () => {
       </div>
 
       <div className="nav-container">
-        <ul>
-          <li>
-            <h2 id="home-action">HOME</h2>
+        <ul className="desktop-ul">
+          <li className="desktop-li">
+            <h2 className="nav-heading" id="home-action">
+              HOME
+            </h2>
           </li>
-          <li>
-            <h2 id="bio-action">BIO</h2>
+          <li className="desktop-li">
+            <h2 className="nav-heading" id="bio-action">
+              BIO
+            </h2>
           </li>
-          <li>
-            <h2 id="project-action">PROJECTS</h2>
+          <li className="desktop-li">
+            <h2 className="nav-heading" id="project-action">
+              PROJECTS
+            </h2>
           </li>
-          <li>
-            <h2 id="contact-action">CONTACT</h2>
+          <li className="desktop-li">
+            <h2 className="nav-heading" id="contact-action">
+              CONTACT
+            </h2>
           </li>
         </ul>
       </div>
@@ -34,7 +42,6 @@ const DesktopNavbar = () => {
             align-items: center;
             display: flex;
             height: 80px;
-            position: sticky;
             justify-content: space-between;
             font-family: Arial;
             background-color: #000000;
@@ -53,22 +60,22 @@ const DesktopNavbar = () => {
             display: flex;
             
           }
-          ul {
+          .desktop-ul {
               display:flex;
               justify-content: space-evenly;
               width: 100%;
               margin: 0 5% 0 0;
           }
-          li{
+          .desktop-li{
             list-style-type: none;
             margin: 0 auto;
           }
-          h2 {
+          .nav-heading {
             color: #FF4900;
             font-weight: 500;
             font-size: 30px;
           }
-          h2:hover {
+          .nav-heading:hover {
               color:#FFBF00;
               cursor: pointer;
           }

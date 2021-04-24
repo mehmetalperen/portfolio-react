@@ -58,9 +58,7 @@ const HomeIntro = () => {
         {`
           .HomeIntro {
             background-color: #000000;
-            border-style: solid;
-            border-width: 2px;
-            border-color: black;
+
             min-height: 100vh;
             min-width: 100%;
             align-items: center;

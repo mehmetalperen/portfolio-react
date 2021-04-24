@@ -13,7 +13,15 @@ const Navbar = () => {
         <DesktopNavbar />
       )}
 
-      <style jsx>{``}</style>
+      <style jsx>{`
+        .Navbar {
+          position: sticky;
+          top: 0;
+          left: 0;
+          right: 0;
+          width: 100%;
+        }
+      `}</style>
     </div>
   );
 };
