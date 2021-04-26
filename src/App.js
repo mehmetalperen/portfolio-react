@@ -36,7 +36,7 @@ const theme = createMuiTheme({
       fontSize: 60,
     },
     h2: {
-      fontSize: 40,
+      fontSize: 45,
     },
     h3: {
       fontSize: 25,

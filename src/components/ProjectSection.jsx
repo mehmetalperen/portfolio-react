@@ -3,6 +3,51 @@ import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import ProjectBox from "./ProjectBox";
 const ProjectSection = () => {
+  const projectObjects = [
+    {
+      picture: "axess-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "hungary-app-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "google-demo-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "word-counter-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    ,
+    {
+      picture: "budget-app-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "movie-finder-pic.png",
+      path: "",
+      description: "",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+  ];
   return (
     <div className="ProjectSection">
       <div className="title-container">
@@ -11,20 +56,19 @@ const ProjectSection = () => {
         </Typography>
       </div>
       <div className="project-wrapper">
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
-        <ProjectBox />
+        {projectObjects.map((project, index) => {
+          return (
+            <ProjectBox
+              key={index}
+              id={index}
+              picture={project.picture}
+              path={project.path}
+              description={project.description}
+              feature={project.features}
+              technologies={project.technologies}
+            />
+          );
+        })}
       </div>
       <style jsx>
         {`
@@ -37,11 +81,7 @@ const ProjectSection = () => {
             display: flex;
             align-items: center;
             justify-content: center;
-            display: flex;
-
-            border-width: 2px;
-            border-color: red;
-            border-style: dashed;
+            margin: 5% auto;
           }
           .project-wrapper {
             display: flex;
@@ -50,10 +90,6 @@ const ProjectSection = () => {
             justify-content: space-evenly;
             max-width: 90%;
             margin: 0 auto;
-
-            border-width: 2px;
-            border-color: blue;
-            border-style: dashed;
           }
         `}
       </style>
