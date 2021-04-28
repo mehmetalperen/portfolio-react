@@ -15,11 +15,10 @@ const Navbar = () => {
 
       <style jsx>{`
         .Navbar {
-          position: sticky;
+          position: fixed;
           top: 0;
-          left: 0;
-          right: 0;
           width: 100%;
+          z-index: 1000;
         }
       `}</style>
     </div>

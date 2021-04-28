@@ -47,9 +47,7 @@ const theme = createMuiTheme({
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App" style={{ maxWidth: "100%", overflowX: "hidden" }}>
-        <PortfolioPage />
-      </div>
+      <PortfolioPage />
     </ThemeProvider>
   );
 }

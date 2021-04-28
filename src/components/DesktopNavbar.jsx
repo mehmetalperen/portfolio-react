@@ -48,38 +48,35 @@ const DesktopNavbar = () => {
             width: 100%;
             align-items: center;
             display: flex;
-
           }
 
           .logo-container {
-            margin: 0 0 0 5%;/
+            margin: 0 0 0 5%;
           }
-          .nav-container{
-            width:70%;
+          .nav-container {
+            width: 70%;
             align-items: center;
             display: flex;
-            
           }
           .desktop-ul {
-              display:flex;
-              justify-content: space-evenly;
-              width: 100%;
-              margin: 0 5% 0 0;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+            margin: 0 5% 0 0;
           }
-          .desktop-li{
+          .desktop-li {
             list-style-type: none;
             margin: 0 auto;
           }
           .nav-heading {
-            color: #FF4900;
+            color: #ff4900;
             font-weight: 500;
             font-size: 30px;
           }
           .nav-heading:hover {
-              color:#FFBF00;
-              cursor: pointer;
+            color: #ffbf00;
+            cursor: pointer;
           }
-
         `}
       </style>
     </div>
