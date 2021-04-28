@@ -7,7 +7,7 @@ import EmailIcon from "@material-ui/icons/Email";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 const ContactSection = () => {
   return (
-    <div className="ContactSection">
+    <div id="ContactMeSection" className="ContactSection">
       <div className="title-container">
         <Typography variant="h2" component="h2" color="black">
           <Box>Let's Get In Touch! </Box>

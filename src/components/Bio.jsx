@@ -20,7 +20,7 @@ const Bio = () => {
   const classes = useStyles();
   const [yellowBtnHover, setYellowBtnHover] = useState(false);
   return (
-    <div className="Bio">
+    <div id="BioSection" className="Bio">
       <div className="bio-content-wrapper">
         <BioContent />
         <BioContent />

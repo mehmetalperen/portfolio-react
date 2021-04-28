@@ -49,7 +49,7 @@ const ProjectSection = () => {
     },
   ];
   return (
-    <div className="ProjectSection">
+    <div id="ProjectSection" className="ProjectSection">
       <div className="title-container">
         <Typography variant="h2" component="h2" color="secondary">
           <Box>PROJECTS </Box>

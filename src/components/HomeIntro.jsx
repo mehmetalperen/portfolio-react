@@ -10,7 +10,7 @@ const HomeIntro = () => {
   // console.log(window.matchMedia("(pointer: coarse)").matches);
 
   return (
-    <div className="HomeIntro">
+    <div id="HomeIntroSection" className="HomeIntro">
       <div className="content-wrapper">
         <div className="greeding-container">
           <h1 className="greeding-message">HELLO,</h1>

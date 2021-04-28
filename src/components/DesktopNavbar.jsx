@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from "react";
-import Button from "@material-ui/core/Button";
+import { Link } from "react-scroll";
 
 const DesktopNavbar = () => {
-  // align-items: center;
-  // display: flex;
-  // flex-wrap: wrap;
+  console.log(window.pageYOffset);
+
+  const handleScrollToAboutUs = () => {
+    window.scrollBy({
+      top: window.innerHeight * 1,
+      behavior: "smooth",
+    });
+    console.log(window.pageYOffset);
+  };
+
   return (
     <div className="DesktopNavbar">
       <div className="logo-container">
@@ -14,24 +21,52 @@ const DesktopNavbar = () => {
       <div className="nav-container">
         <ul className="desktop-ul">
           <li className="desktop-li">
-            <h2 className="nav-heading" id="home-action">
-              HOME
-            </h2>
+            <Link
+              className="nav-link"
+              to="HomeIntroSection"
+              smooth={true}
+              duration={1000}
+            >
+              <h2 className="nav-heading" id="home-action">
+                HOME
+              </h2>
+            </Link>
           </li>
           <li className="desktop-li">
-            <h2 className="nav-heading" id="bio-action">
-              BIO
-            </h2>
+            <Link
+              to="BioSection"
+              smooth={true}
+              duration={1000}
+              className="nav-link"
+            >
+              <h2 className="nav-heading" id="bio-action">
+                BIO
+              </h2>
+            </Link>
           </li>
           <li className="desktop-li">
-            <h2 className="nav-heading" id="project-action">
-              PROJECTS
-            </h2>
+            <Link
+              to="ProjectSection"
+              smooth={true}
+              duration={1000}
+              className="nav-link"
+            >
+              <h2 className="nav-heading" id="project-action">
+                PROJECTS
+              </h2>
+            </Link>
           </li>
           <li className="desktop-li">
-            <h2 className="nav-heading" id="contact-action">
-              CONTACT
-            </h2>
+            <Link
+              to="ContactMeSection"
+              smooth={true}
+              duration={1000}
+              className="nav-link"
+            >
+              <h2 className="nav-heading" id="contact-action">
+                CONTACT
+              </h2>
+            </Link>
           </li>
         </ul>
       </div>
@@ -49,7 +84,9 @@ const DesktopNavbar = () => {
             align-items: center;
             display: flex;
           }
-
+          .nav-link {
+            text-decoration: none;
+          }
           .logo-container {
             margin: 0 0 0 5%;
           }
