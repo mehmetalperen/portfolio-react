@@ -2,16 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 
 const DesktopNavbar = () => {
-  console.log(window.pageYOffset);
-
-  const handleScrollToAboutUs = () => {
-    window.scrollBy({
-      top: window.innerHeight * 1,
-      behavior: "smooth",
-    });
-    console.log(window.pageYOffset);
-  };
-
   return (
     <div className="DesktopNavbar">
       <div className="logo-container">
@@ -80,7 +70,7 @@ const DesktopNavbar = () => {
             justify-content: space-between;
             font-family: Arial;
             background-color: #000000;
-            width: 100%;
+            min-width: 101%;
             align-items: center;
             display: flex;
           }

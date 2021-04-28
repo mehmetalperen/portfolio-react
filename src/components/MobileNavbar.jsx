@@ -4,7 +4,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import CloseIcon from "@material-ui/icons/Close";
 import { makeStyles } from "@material-ui/core";
-
+import { Link } from "react-scroll";
 const useStyles = makeStyles({
   btnStyle: {
     paddingTop: "16px",
@@ -14,8 +14,14 @@ const useStyles = makeStyles({
 });
 const MobileNavbar = () => {
   const classes = useStyles();
-
   const [isHamburgerClick, setIsHamburgerClick] = useState(false);
+
+  const navObjList = [
+    { path: "HomeIntroSection", color: "primary", name: "HOME" },
+    { path: "BioSection", color: "secondary", name: "BIO" },
+    { path: "ProjectSection", color: "primary", name: "PROJECTS" },
+    { path: "ContactMeSection", color: "secondary", name: "CONTACT" },
+  ];
   return (
     <div className="MobileNavbar">
       <div className="logo-container">
@@ -37,46 +43,31 @@ const MobileNavbar = () => {
         <div className="dropdown-nav">
           <div className="btn-container">
             <ul className="mobil-ul">
-              <li className="mobil-li">
-                <Button
-                  className={classes.btnStyle}
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                >
-                  HOME
-                </Button>
-              </li>
-              <li className="mobil-li">
-                <Button
-                  className={classes.btnStyle}
-                  variant="contained"
-                  color="secondary"
-                  fullWidth
-                >
-                  HOME
-                </Button>
-              </li>
-              <li className="mobil-li">
-                <Button
-                  className={classes.btnStyle}
-                  variant="contained"
-                  color="primary"
-                  fullWidth
-                >
-                  HOME
-                </Button>
-              </li>
-              <li className="mobil-li">
-                <Button
-                  className={classes.btnStyle}
-                  variant="contained"
-                  color="secondary"
-                  fullWidth
-                >
-                  HOME
-                </Button>
-              </li>
+              {navObjList.map((el, index) => {
+                return (
+                  <Link
+                    to={el.path}
+                    smooth={true}
+                    duration={1000}
+                    key={index}
+                    id={index}
+                  >
+                    <li className="mobil-li">
+                      <Button
+                        onClick={() => {
+                          setIsHamburgerClick(!isHamburgerClick);
+                        }}
+                        className={classes.btnStyle}
+                        variant="contained"
+                        color={el.color}
+                        fullWidth
+                      >
+                        {el.name}
+                      </Button>
+                    </li>
+                  </Link>
+                );
+              })}
             </ul>
 
             <div className="close-btn-container">

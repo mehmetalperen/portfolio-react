@@ -1,13 +1,9 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 const HomeIntro = () => {
   const [hoverName, setHoverName] = useState(false);
   const [hoverAction, setHoverAction] = useState(false);
-  // align-items: center;
-  // display: flex;
-  // flex-wrap: wrap;
-
-  // console.log(window.matchMedia("(pointer: coarse)").matches);
 
   return (
     <div id="HomeIntroSection" className="HomeIntro">
@@ -37,20 +33,25 @@ const HomeIntro = () => {
         </div>
 
         <div className="action-container">
-          <h1
-            id="action-message"
-            onMouseEnter={() => {
-              setHoverAction(true);
-            }}
-            onMouseLeave={() => {
-              setHoverAction(false);
-            }}
-            onClick={() => {
-              alert("Will be scrooling down");
-            }}
+          <Link
+            to="BioSection"
+            smooth={true}
+            duration={1000}
+            className="nav-link"
           >
-            {hoverAction ? "CLICK!" : "LEARN MORE?"}
-          </h1>
+            <h1
+              className="greeding-message"
+              id="action-message"
+              onMouseEnter={() => {
+                setHoverAction(true);
+              }}
+              onMouseLeave={() => {
+                setHoverAction(false);
+              }}
+            >
+              {hoverAction ? "CLICK!" : "LEARN MORE?"}
+            </h1>
+          </Link>
         </div>
       </div>
       <img id="pp" src="cover-pic.jpg" alt="my-profile-pic" />
@@ -70,13 +71,12 @@ const HomeIntro = () => {
             min-width: 50%;
             z-index: 10;
           }
-          h1 {
+
+          .greeding-message {
+            color: #1882d4;
             font-family: Arial;
             font-size: 60px;
             font-weight: 500;
-          }
-          .greeding-message {
-            color: #1882d4;
           }
 
           #action-message {
@@ -111,6 +111,9 @@ const HomeIntro = () => {
             .content-wrapper {
               margin: 0 auto;
               width: 100%;
+            }
+            .greeding-message {
+              font-size: 40px;
             }
           }
         `}

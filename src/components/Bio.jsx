@@ -4,21 +4,40 @@ import BioContent from "./BioContent";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
 import { makeStyles } from "@material-ui/core";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { Link } from "react-scroll";
 
 const useStyles = makeStyles({
   smallBtn: {
     margin: "10px auto",
     width: "40%",
+    minWidth: "160px",
+    borderRadius: "20px",
   },
   bigBtn: {
     margin: "10px auto",
     width: "90%",
+    borderRadius: "20px",
   },
 });
 
 const Bio = () => {
   const classes = useStyles();
-  const [yellowBtnHover, setYellowBtnHover] = useState(false);
+  const [color, setColor] = useState("blue");
+
+  const theme = React.useMemo(() => {
+    if (color === "blue") {
+      return createMuiTheme({
+        palette: {
+          secondary: {
+            main: "#FFBF00",
+            contrastText: "#fff",
+          },
+        },
+      });
+    }
+    return createMuiTheme();
+  }, [color]);
   return (
     <div id="BioSection" className="Bio">
       <div className="bio-content-wrapper">
@@ -27,36 +46,48 @@ const Bio = () => {
 
         <div className="btn-wrapper">
           <div className="small-btn-container">
+            <ThemeProvider theme={theme}>
+              <Button
+                variant="contained"
+                className={classes.smallBtn}
+                color="secondary"
+                onClick={() => {
+                  alert("put your updated resume");
+                  window.open("LAPC-tsrpt.pdf");
+                }}
+              >
+                <Typography variant="h5" component="h5">
+                  <Box color="black">RESUME</Box>
+                </Typography>
+              </Button>
+            </ThemeProvider>
+
             <Button
               className={classes.smallBtn}
               variant="contained"
-              color="primary"
+              color="secondary"
+              onClick={() => {
+                window.open("LAPC-tsrpt.pdf");
+              }}
             >
-              <Typography variant="h3" component="h3">
-                <Box color="black">RESUME</Box>
-              </Typography>
-            </Button>
-            <Button
-              className={classes.smallBtn}
-              variant="contained"
-              color="primary"
-            >
-              <Typography variant="h3" component="h3">
+              <Typography variant="h5" component="h5">
                 <Box color="black">TRANSCRIPT </Box>
               </Typography>
             </Button>
           </div>
           <div className="big-btn-container">
-            <Button
-              className={classes.bigBtn}
-              variant="contained"
-              color="secondary"
-              fullWidth
-            >
-              <Typography variant="h3" component="h3">
-                <Box color="black">PROJECTS </Box>
-              </Typography>
-            </Button>
+            <Link to="ProjectSection" smooth={true} duration={1000}>
+              <Button
+                className={classes.bigBtn}
+                variant="contained"
+                color="primary"
+                fullWidth
+              >
+                <Typography variant="h5" component="h5">
+                  <Box color="black">PROJECTS </Box>
+                </Typography>
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

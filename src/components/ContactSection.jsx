@@ -9,7 +9,7 @@ const ContactSection = () => {
   return (
     <div id="ContactMeSection" className="ContactSection">
       <div className="title-container">
-        <Typography variant="h2" component="h2" color="black">
+        <Typography variant="h2" component="h2" color="black" align="center">
           <Box>Let's Get In Touch! </Box>
         </Typography>
       </div>
@@ -53,7 +53,8 @@ const ContactSection = () => {
           <Typography variant="body1" component="p" color="black">
             <Box>©{new Date().getFullYear()} Mehmet Nadi </Box>
             <Box>
-              Made with <FavoriteIcon style={{ color: "#FF4900" }} /> in LA{" "}
+              Made with
+              <FavoriteIcon style={{ color: "#FF4900" }} /> in LA{" "}
             </Box>
           </Typography>
         </div>
@@ -70,6 +71,8 @@ const ContactSection = () => {
         }
         .title-container {
           width: 100%;
+          align-items: center;
+          margin: 0 auto;
         }
         .socials-container {
           min-width: 100%;
@@ -92,14 +95,13 @@ const ContactSection = () => {
         }
 
         .social-icon {
-          margin: 0 auto;
+          margin: 20% auto;
           opacity: 1;
           transition: width 0.2s ease, height 0.2s ease;
         }
         .social-icon:hover {
           opacity: 0.6;
-          width: 80px;
-          height: 80px;
+          transform: scale(1.5);
         }
         .footer-container {
           width: 100%;
@@ -111,7 +113,7 @@ const ContactSection = () => {
           margin: 0 auto;
         }
         .footer-content-container {
-          margin: 0 auto;
+          margin: 20% auto 0 auto;
         }
       `}</style>
     </div>
