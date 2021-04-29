@@ -50,8 +50,13 @@ const ProjectSection = () => {
   ];
   return (
     <div id="ProjectSection" className="ProjectSection">
-      <div className="title-container">
-        <Typography variant="h2" component="h2" color="secondary">
+      <div className="project-title-container">
+        <Typography
+          variant="h2"
+          component="h2"
+          color="secondary"
+          align="center"
+        >
           <Box>PROJECTS </Box>
         </Typography>
       </div>
@@ -76,12 +81,13 @@ const ProjectSection = () => {
             min-height: 100vh;
             width: 100%;
             align-items: center;
+            padding-top: 5%;
           }
-          .title-container {
+          .project-title-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 5% auto;
+            margin: 0 auto;
           }
           .project-wrapper {
             display: flex;
@@ -89,7 +95,7 @@ const ProjectSection = () => {
             align-items: center;
             justify-content: space-evenly;
             max-width: 90%;
-            margin: 0 auto;
+            margin: 5% auto;
           }
         `}
       </style>

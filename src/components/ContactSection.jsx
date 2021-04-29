@@ -63,7 +63,7 @@ const ContactSection = () => {
       <style jsx>{`
         .ContactSection {
           background-color: #1882d4;
-          min-height: 100vh;
+          min-height: 90vh;
           width: 100%;
           align-items: center;
           display: flex;
