@@ -25,6 +25,19 @@ const Bio = () => {
   const classes = useStyles();
   const [color, setColor] = useState("blue");
 
+  const myInfo = [
+    {
+      title: "BIO:",
+      content:
+        "I am a second-year college student majoring in Computer Science with a GPA of 3.9. I have always been passionate about technology, science, and engineering. Even in my earliest memories, I am trying to solve an engineering problem. The love of making stuff and creating solutions has eventually led me to fall in love with software development.",
+    },
+
+    {
+      title: "SKILLS:",
+      content:
+        "I love working on a project and learning new skills in software development. My favorite library is React. I feel confident in building applications using Javascript, JSX, CSS, HTML, Material-UI, and Boostrap. I have built several websites and web applications.",
+    },
+  ];
   const theme = React.useMemo(() => {
     if (color === "blue") {
       return createMuiTheme({
@@ -41,8 +54,16 @@ const Bio = () => {
   return (
     <div id="BioSection" className="Bio">
       <div className="bio-content-wrapper">
-        <BioContent />
-        <BioContent />
+        {myInfo.map((el, index) => {
+          return (
+            <BioContent
+              key={index}
+              title={el.title}
+              content={el.content}
+              test={el.test}
+            />
+          );
+        })}
 
         <div className="btn-wrapper">
           <div className="small-btn-container">
@@ -61,19 +82,20 @@ const Bio = () => {
                 </Typography>
               </Button>
             </ThemeProvider>
-
-            <Button
-              className={classes.smallBtn}
-              variant="contained"
-              color="secondary"
-              onClick={() => {
-                window.open("LAPC-tsrpt.pdf");
-              }}
-            >
-              <Typography variant="h5" component="h5">
-                <Box color="black">TRANSCRIPT </Box>
-              </Typography>
-            </Button>
+            <ThemeProvider>
+              <Button
+                className={classes.smallBtn}
+                variant="contained"
+                color="secondary"
+                onClick={() => {
+                  window.open("LAPC-tsrpt.pdf");
+                }}
+              >
+                <Typography variant="h5" component="h5">
+                  <Box color="black">TRANSCRIPT </Box>
+                </Typography>
+              </Button>
+            </ThemeProvider>
           </div>
           <div className="big-btn-container">
             <Link to="ProjectSection" smooth={true} duration={1000}>
