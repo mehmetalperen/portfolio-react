@@ -54,7 +54,7 @@ const ContactSection = () => {
             <Box>©{new Date().getFullYear()} Mehmet Nadi </Box>
             <Box>
               Made with
-              <FavoriteIcon style={{ color: "#FF4900" }} /> in LA{" "}
+              <FavoriteIcon style={{ color: "#FFBF00" }} /> in LA{" "}
             </Box>
           </Typography>
         </div>

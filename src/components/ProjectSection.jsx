@@ -6,44 +6,50 @@ const ProjectSection = () => {
   const projectObjects = [
     {
       picture: "axess-pic.png",
-      path: "",
-      description: "",
+      path: "https://devpost.com/software/axess",
+      description:
+        "Axess takes advantage of the popularity of tools such as CodePen and JSBin among those learning web development by offering an NPM Package that allows for seamless integration of online IDE's into a web accessibility education tool.",
       features: ["", ""],
       technologies: ["", ""],
     },
     {
       picture: "hungary-app-pic.png",
-      path: "",
-      description: "",
+      path: "https://unruffled-wiles-bb251b.netlify.app/",
+      description:
+        "Hungry is a recipe search app with an incredible user interface that makes cooking fun and easy! Access to 330,000 recipes. YouTube Support. Step by step instructions. Like/Unlike functionality. ",
       features: ["", ""],
       technologies: ["", ""],
     },
     {
       picture: "google-demo-pic.png",
-      path: "",
-      description: "",
+      path: "https://optimistic-easley-995549.netlify.app/",
+      description:
+        "Recreated the Google Classroom experience. Creating new class. Making class announcements. Replying to an announcement or to a comment. Deleting announcements and comments",
       features: ["", ""],
       technologies: ["", ""],
     },
     {
       picture: "word-counter-pic.png",
-      path: "",
-      description: "",
+      path: "https://upbeat-aryabhata-595ba2.netlify.app/",
+      description:
+        "Count My Word is a word counter app with additional features.Progress tracker. Character Counter. Sentence Counter. Paragraph Counter. Responsive. Frequently Used Words(deletable).",
       features: ["", ""],
       technologies: ["", ""],
     },
     ,
     {
       picture: "budget-app-pic.png",
-      path: "",
-      description: "",
+      path: "https://mehmetalperen.github.io/Year-budget-calculator-/",
+      description:
+        "My Budgetary is a budget calculator app with a user-friendly UI! Month Support. Change in Color depending on Financial wellness. Sentence Counter. Alert in case of Financial Danger. Add/Delete detail. Responsive.",
       features: ["", ""],
       technologies: ["", ""],
     },
     {
       picture: "movie-finder-pic.png",
-      path: "",
-      description: "",
+      path: "https://laughing-banach-cac211.netlify.app/",
+      description:
+        "Movie Finder Pro is a movie search app with a responsive UI! Search Movie. Like/Unlike. See details. Add Comments. Go to Movie official page",
       features: ["", ""],
       technologies: ["", ""],
     },

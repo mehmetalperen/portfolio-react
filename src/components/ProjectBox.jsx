@@ -5,18 +5,11 @@ import Box from "@material-ui/core/Box";
 const ProjectBox = (props) => {
   return (
     <div id={`ProjectBox${props.id}`}>
-      <a
-        href="https://www.thesaurus.com/"
-        target="_blank"
-        style={{ textDecoration: "none" }}
-      >
+      <a href={props.path} target="_blank" style={{ textDecoration: "none" }}>
         <div id="project-des-container">
           <Typography variant="body1" component="p">
             <Box color="text.primary" m="1rem">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni
-              enim nam praesentium excepturi ratione id blanditiis voluptatibus
-              sit tempore minus repudiandae officiis dolores, iure et maxime
-              aliquam consectetur nemo laudantium!
+              {props.description}
             </Box>
           </Typography>
         </div>
