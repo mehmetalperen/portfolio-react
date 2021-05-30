@@ -53,6 +53,14 @@ const ProjectSection = () => {
       features: ["", ""],
       technologies: ["", ""],
     },
+    {
+      picture: "natural-selection.png",
+      path: "https://mehmetalperen.github.io/natural-selection-simulation/",
+      description:
+        "This natural selection simulation was a work I did for fun. I practiced my object-oriented programming skills while building this project. This project sparked an interest in me for Machine Learning and AI.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
   ];
   return (
     <div id="ProjectSection" className="ProjectSection">

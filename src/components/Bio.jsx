@@ -73,8 +73,7 @@ const Bio = () => {
                 className={classes.smallBtn}
                 color="secondary"
                 onClick={() => {
-                  alert("put your updated resume");
-                  window.open("LAPC-tsrpt.pdf");
+                  window.open("CS Resume.pdf");
                 }}
               >
                 <Typography variant="h5" component="h5">
