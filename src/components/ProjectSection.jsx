@@ -61,6 +61,14 @@ const ProjectSection = () => {
       features: ["", ""],
       technologies: ["", ""],
     },
+    {
+      picture: "snake-game-pic.png",
+      path: "https://mehmetalperen.github.io/snake-game/",
+      description:
+        "This snake game was one of the project I did for fun. I practiced my Vanila JS skills doing this project.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
   ];
   return (
     <div id="ProjectSection" className="ProjectSection">
