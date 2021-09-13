@@ -13,6 +13,30 @@ const ProjectSection = () => {
       technologies: ["", ""],
     },
     {
+      picture: "stem-bound-pic.png",
+      path: "https://www.stembound.education",
+      description:
+        "Stem-bound is a platform to connect professionals in STEM fields to high schools for afterschool and weekend coursework on in-demand subjects to bridge students to internship opportunities. I worked as Front-end developer and on the Figma design of the static pages.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "mentor-base-student-pic.png",
+      path: "https://www.figma.com/file/gGL9Tf7rYYYC0NbrqwCYKq/MentorBase-Student?node-id=0%3A1",
+      description:
+        "Mentor-base is a platform that connects students, teachers, parents, and admins to provide a better education experience. I worked as the Product Manager and designer. I also occasionally helped the engineering team. This is the Figma design for the students.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
+      picture: "mentor-base-parent-pic.png",
+      path: "https://www.figma.com/file/BaQVmOl9ueIU3ubI7sz8GP/MentorBase-Parent?node-id=0%3A1",
+      description:
+        "Mentor-base is a platform that connects students, teachers, parents, and admins to provide a better education experience. I worked as the Product Manager and designer. I also occasionally helped the engineering team. This is the Figma design for the parents.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
       picture: "hungary-app-pic.png",
       path: "https://unruffled-wiles-bb251b.netlify.app/",
       description:
