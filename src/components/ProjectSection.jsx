@@ -5,6 +5,14 @@ import ProjectBox from "./ProjectBox";
 const ProjectSection = () => {
   const projectObjects = [
     {
+      picture: "counselHero-pic.png",
+      path: "https://www.counselhero.com/",
+      description:
+        "Currently, I'm working at Counselhero as a software developer intern where I contribute to the company's effort to build an educational tool that automates counseling for high school and college students.",
+      features: ["", ""],
+      technologies: ["", ""],
+    },
+    {
       picture: "axess-pic.png",
       path: "https://devpost.com/software/axess",
       description:

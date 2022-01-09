@@ -54,7 +54,7 @@ const HomeIntro = () => {
           </Link>
         </div>
       </div>
-      <img id="pp" src="cover-pic.jpg" alt="my-profile-pic" />
+      {/* <img id="pp" src="no-comments.jpg" alt="my-profile-pic" /> */}
       <style jsx>
         {`
           .HomeIntro {
