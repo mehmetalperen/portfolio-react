@@ -54,7 +54,7 @@ const HomeIntro = () => {
           </Link>
         </div>
       </div>
-      {/* <img id="pp" src="no-comments.jpg" alt="my-profile-pic" /> */}
+      <img id="pp" src="cover-pic.jpg" alt="my-profile-pic" />
       <style jsx>
         {`
           .HomeIntro {
@@ -92,7 +92,9 @@ const HomeIntro = () => {
             top: 0;
             max-height: 100vh;
             margin: 0 0 0 auto;
-            border-radius: 100% 100% 0 50%;
+             {
+              /* border-radius: 100% 100% 0 50%; */
+            }
             opacity: 0;
             animation: picLoad 2s ease-in-out 0.5s forwards;
           }
