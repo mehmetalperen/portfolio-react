@@ -86,29 +86,14 @@ const Bio = () => {
                 className={classes.smallBtn}
                 variant="contained"
                 color="secondary"
-                onClick={() => {
-                  window.open("LAPC-tsrpt.pdf");
-                }}
               >
                 <Typography variant="h5" component="h5">
-                  <Box color="black">TRANSCRIPT </Box>
+                  <Link to="ProjectSection" smooth={true} duration={1000}>
+                    <Box color="black">PROJECTS </Box>
+                  </Link>
                 </Typography>
               </Button>
             </ThemeProvider>
-          </div>
-          <div className="big-btn-container">
-            <Link to="ProjectSection" smooth={true} duration={1000}>
-              <Button
-                className={classes.bigBtn}
-                variant="contained"
-                color="primary"
-                fullWidth
-              >
-                <Typography variant="h5" component="h5">
-                  <Box color="black">PROJECTS </Box>
-                </Typography>
-              </Button>
-            </Link>
           </div>
         </div>
       </div>
